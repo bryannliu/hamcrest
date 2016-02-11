@@ -23,7 +23,8 @@ import junit.framework.TestCase;
 public class BiscuitTest extends TestCase { 
   public void testEquals() { 
     Biscuit theBiscuit = new Biscuit("Ginger"); 
-    Biscuit myBiscuit = new Biscuit("Ginger"); assertThat(theBiscuit, equalTo(myBiscuit)); 
+    Biscuit myBiscuit = new Biscuit("Ginger"); 
+    assertThat(theBiscuit, equalTo(myBiscuit)); 
   } 
 } 
 ```
@@ -82,7 +83,8 @@ Hamcrest comes with a library of useful matchers. Here are some of the most impo
 Hamcrest strives to make your tests as readable as possible. For example, the `is` matcher is a wrapper that doesn't add any extra behavior to the underlying matcher. The following assertions are all equivalent:
 
 ``` java
-  assertThat(theBiscuit, equalTo(myBiscuit)); assertThat(theBiscuit, is(equalTo(myBiscuit))); 
+  assertThat(theBiscuit, equalTo(myBiscuit)); 
+  assertThat(theBiscuit, is(equalTo(myBiscuit))); 
   assertThat(theBiscuit, is(myBiscuit));
 ```
 
